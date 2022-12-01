@@ -1,9 +1,10 @@
 package org.example;
 
+import static java.util.Comparator.reverseOrder;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 
@@ -16,7 +17,7 @@ public class Day1B {
         Paths.get("/Users/rcepeda/src/rubencepeda/advent_of_code_2022/src/main/resources/day_1_b.txt"));
     int count = 0;
 
-    PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
+    PriorityQueue<Integer> maxHeap = new PriorityQueue<>(reverseOrder());
     for (String line : lines) {
       if (StringUtils.isNumeric(line)) {
         count += Integer.parseInt(line);
